@@ -1,0 +1,61 @@
+/* CSS Reset */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+} 
+
+@font-face {
+   src: url(Public/ARCADECLASSIC.TTF);
+   font-family: arcade;
+}
+
+body{
+   background-color: rgb(22, 22, 63);
+}
+
+h2{
+   font-family: 'Kumar One Outline', cursive;
+   margin-top: 30px;
+   font-size: 60px;
+   text-align: center;
+   margin-bottom: 100px;
+   color: white;
+}
+
+#parent{
+   width: 40%;
+   height: 350px;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+}
+
+.child{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.square{
+   height: 150px;
+   width: 150px;
+   border-radius: 20px;
+   border: 6px solid black;
+}
+
+#red{
+   background-color: red;
+}
+
+#blue{
+   background-color: blue;
+}
+
+#green{
+   background-color: green;
+}
+
+#yellow{
+   background-color: yellow;
+}

@@ -67,3 +67,26 @@ function correct(){
    target+=1;
    wait_for_user_input();
 }
+
+
+// Style Section
+
+// Blink Corret click
+function blink(element){
+   let audio = element.querySelector("audio");
+   audio.play();
+   let backgroundColor = getComputedStyle(element).backgroundColor;
+   element.style.boxShadow = "0px 0px 5px 8px grey"
+   element.style.backgroundColor = "grey";
+   setTimeout(()=> element.style.backgroundColor = `${backgroundColor}`, 100);
+   setTimeout(()=>element.style.boxShadow = "0px 0px 0px 0px ",100);
+}
+
+// Highlight target element
+function highlight(element){
+   setTimeout(() => {
+      let backgroundColor = getComputedStyle(element).backgroundColor;
+      element.style.backgroundColor = "black";
+      setTimeout(()=> element.style.backgroundColor = `${backgroundColor}`, 150)
+   }, 1000);
+}

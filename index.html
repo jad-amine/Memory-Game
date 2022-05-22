@@ -3,7 +3,7 @@
 <head>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="stylesheet" href="Styles/style.css">
-   <title>Memory Game</title>
+   <title>Optimization script</title>
 </head>
 <body>
 
@@ -12,17 +12,19 @@
    <div id="parent">
 
       <div class="child">
-         <div class="square" id="green"></div>
-         <div class="square" id="red"></div>
+         <div class="square" id="green"><audio src="/Public/green.mp3"></audio></div>
+         <div class="square" id="red"><audio src="/Public/red.mp3"></audio></div>
       </div>
 
       <div class="child">
-         <div class="square" id="yellow"></div>
-         <div class="square" id="blue"></div>
+         <div class="square" id="yellow"><audio src="/Public/yellow.mp3"></audio></div>
+         <div class="square" id="blue"><audio src="/Public/blue.mp3"></audio></div>
       </div>
    
    </div> 
+   
+   <audio id="wrong" src="/Public/wrong.mp3"></audio>
 
-   <script src="app.js"></script>
+   <script src="optimization1.js"></script>
 </body>
 </html>

@@ -90,3 +90,28 @@ function highlight(element){
       setTimeout(()=> element.style.backgroundColor = `${backgroundColor}`, 150)
    }, 1000);
 }
+
+
+// Game over section
+function gamer_over(){
+   console.log("Wrong element, Game over")
+   stop_listening();
+   pattern[target].removeEventListener("click", correct);
+   document.querySelector("#wrong").play();
+   let body = document.querySelector("body")
+   body.style.backgroundColor = "red";
+   setTimeout(()=> body.style.backgroundColor = "rgb(22, 22, 63)", 500);
+   h2.innerHTML = "Game Over, Press Any Key to Restart"
+   document.addEventListener("click", restart);
+   counter = 0;
+   target = 0;
+   level = 0;
+   pattern = [];
+}
+
+// Restart Game Section
+function restart(){
+   console.log("Press to Restart the Game")
+   document.removeEventListener("click", restart);
+   document.addEventListener("click", start_game);
+}

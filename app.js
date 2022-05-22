@@ -85,6 +85,8 @@ function blink(element){
 // Highlight target element
 function highlight(element){
    setTimeout(() => {
+      let audio = element.querySelector("audio");
+      audio.play();
       let backgroundColor = getComputedStyle(element).backgroundColor;
       element.style.backgroundColor = "black";
       setTimeout(()=> element.style.backgroundColor = `${backgroundColor}`, 150)
